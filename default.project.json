@@ -4,7 +4,7 @@
 		"$className": "DataModel",
 		"ServerScriptService": {
 			"$className": "ServerScriptService",
-			"CmdrServer": {
+			"CmdrServerConfig": {
 				"$className": "Folder",
 				"$path": "./CmdrServer"
 			},
@@ -42,10 +42,14 @@
 		},
 		"ReplicatedStorage": {
 			"$className": "ReplicatedStorage",
-			"CmdrHooks": {
+			"CmdrReplicated": {
 				"$className": "Folder",
-				"$path": "./CmdrHooks"
-			}
+				"$path": "./CmdrReplicated",
+				"CmdrHooks": {
+					"$className": "Folder",
+					"$path": "./CmdrReplicated/CmdrHooks"
+				}
+			} 
 		}
 	}
 }
