@@ -1,5 +1,6 @@
-local DataStoreService = game:GetService("DataStoreService")
-local BanDB = DataStoreService:GetDataStore("[INSERT DATABASE HERE]")
+local CmdrServer = script.Parent
+local Settings = require(CmdrServer.CmdrSettings)
+local BanDB = Settings.Database
 
 game.Players.PlayerAdded:Connect(function(plr)
 	local v

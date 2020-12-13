@@ -1,5 +1,6 @@
-local DataStoreService = game:GetService("DataStoreService")
-local BanDB = DataStoreService:GetDataStore("[INSERT DATABASE HERE]")
+local CmdrServer = game.ServerScriptService.CmdrServer
+local Settings = require(CmdrServer.CmdrSettings)
+local BanDB = Settings.Database
 
 return function (context, player)
 	local plr = game.Players:GetUserIdFromNameAsync(player)
