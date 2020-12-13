@@ -1,3 +1,4 @@
+local ServerScriptService = game:GetService("ServerScriptService")
 local Settings = require(ServerScriptService.CmdrServer.CmdrSettings)
 
 return function(registry)

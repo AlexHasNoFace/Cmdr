@@ -31,13 +31,13 @@ return function(context, player, message)
             infractionsData = HttpService:JSONDecode(infractionsData) -- Decode the data if there is any
         else
             infractionsData = {}
+            infractionsData.infractions = {}
         end
 
-        if not err then -- Check to see if there is an error
+        if success then -- Check for success
 
             if infractionsData.banMessage ~= nil then -- Checks whether to see the player has been banned before (Players can bypass bans, I've seen it first hand)
                 local infraction = {"Ban", infractionsData.timeOfBan, infractionsData.adminWhoBanned, infractionsData.banMessage} -- Add the previous infraction info
-                infraction = HttpService:JSONEncode(infraction) -- Encode it
 
                 table.insert(infractionsData.infractions, infraction) -- Insert it to the Infractions table
             end
@@ -51,8 +51,9 @@ return function(context, player, message)
             local success, err = pcall(function()
                 InfractionsDB:SetAsync(player.UserId, infractionsData)
             end)
-
+            
             if success then
+                player:Kick("Banned for: " ..message)
                 return("Banned " ..player.Name .." for " ..message ..". Current Date = " ..os.date())
             end
 

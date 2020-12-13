@@ -42,9 +42,9 @@
 		},
 		"ReplicatedStorage": {
 			"$className": "ReplicatedStorage",
-			"CmdrHooks": {
+			"CmdrReplicated": {
 				"$className": "Folder",
-				"$path": "./CmdrHooks"
+				"$path": "./CmdrReplicated"
 			}
 		}
 	}
