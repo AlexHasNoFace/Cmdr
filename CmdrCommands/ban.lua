@@ -1,13 +1,13 @@
 return {
 	Name = "ban";
 	Aliases = {"pban"};
-	Description = "Permanantly bans the target player(s) from the game.";
+	Description = "Permanantly bans the target player from the game.";
 	Group = "DefaultAdmin";
 	Args = {
 		{
-			Type = "players";
-			Name = "players";
-			Description = "The player(s) you wish to ban.";
+			Type = "player";
+			Name = "player";
+			Description = "The player you wish to ban.";
 		}, {
 			Type = "string";
 			Name = "message";
