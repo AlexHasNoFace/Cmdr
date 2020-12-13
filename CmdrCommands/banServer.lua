@@ -1,5 +1,5 @@
 local DataStoreService = game:GetService("DataStoreService")
-local BanDB = DataStoreService:GetDataStore("AustralianFederalPoliceCriminalBanDatabase")
+local BanDB = DataStoreService:GetDataStore("[INSERT DATABASE HERE]")
 
 return function (context, players, message)
 	for _, player in pairs(players) do

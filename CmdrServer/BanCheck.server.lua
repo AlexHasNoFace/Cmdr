@@ -1,5 +1,5 @@
 local DataStoreService = game:GetService("DataStoreService")
-local BanDB = DataStoreService:GetDataStore("WatermelonGUY_YEAH_PlayerDatabase")
+local BanDB = DataStoreService:GetDataStore("[INSERT DATABASE HERE]")
 
 game.Players.PlayerAdded:Connect(function(plr)
 	local v
