@@ -1,4 +1,4 @@
-local Settings = raquire(ServerScriptService.CmdrServer.CmdrSettings)
+local Settings = require(ServerScriptService.CmdrServer.CmdrSettings)
 
 return function(registry)
 	registry:RegisterHook("BeforeRun", function(context)
