@@ -1,9 +1,6 @@
 # Cmdr
 Custom Version of Cmdr using Rojo Live Sync
 
-# Cmdr
-Custom Version of Cmdr using Rojo Live Sync
-
 This custom version of Cmdr has all the tools needed to start a basic moderation system.
 
 ## Commands
