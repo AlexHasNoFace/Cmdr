@@ -10,12 +10,19 @@ This custom version of Cmdr has all the tools needed to start a basic moderation
 Some commands include
 
 > Ban
+
 > Countdown
+
 > Give
+
 > Speed
+
 > Kick
+
 > To
+
 > Teleport
+
 
 ## Setup
 Refer to https://rojo.space on how to setup Rojo
