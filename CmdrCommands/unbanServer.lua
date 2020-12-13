@@ -1,8 +1,8 @@
-local ServerScriptService = game:GetService("ServerScriptService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local DataStoreService = game:GetService("DataStoreService")
 local Players = game:GetService("Players")
 local HttpService = game:GetService("HttpService")
-local Settings = require(ServerScriptService.CmdrServer.CmdrSettings)
+local Settings = require(ReplicatedStorage.CmdrReplicated.CmdrSettings)
 local InfractionsDB = DataStoreService:GetDataStore(Settings.Database)
 
 --[[

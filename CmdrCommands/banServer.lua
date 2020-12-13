@@ -1,7 +1,7 @@
-local ServerScriptService = game:GetService("ServerScriptService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local DataStoreService = game:GetService("DataStoreService")
 local HttpService = game:GetService("HttpService")
-local Settings = require(ServerScriptService.CmdrServer.CmdrSettings)
+local Settings = require(ReplicatedStorage.CmdrReplicated.CmdrSettings)
 local InfractionsDB = DataStoreService:GetDataStore(Settings.Database)
 
 --[[
@@ -39,7 +39,7 @@ return function(context, player, message)
             if infractionsData.banMessage ~= nil then -- Checks whether to see the player has been banned before (Players can bypass bans, I've seen it first hand)
                 local infraction = {"Ban", infractionsData.timeOfBan, infractionsData.adminWhoBanned, infractionsData.banMessage} -- Add the previous infraction info
 
-                table.insert(infractionsData.infractions, infraction) -- Insert it to the Infractions table
+                table.insert(infractionsData.infractions, #t+1, infraction) -- Insert it to the Infractions table
             end
 
             infractionsData.timeOfBan = os.date() -- Get Current Date
